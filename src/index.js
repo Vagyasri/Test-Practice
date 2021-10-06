@@ -1,13 +1,10 @@
+import _ from 'lodash';
 import './style.css';
 
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
-  element.classList.add('hello');
+// Write a function stringLength(string) that takes any string as an argument and returns its characters count.
+
+const stringLength = (string) => {
+    return string.length;
+}
+
+stringLength('Lucky');
