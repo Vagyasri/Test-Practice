@@ -1,10 +1,16 @@
 import _ from 'lodash';
 import './style.css';
 
-// Write a function stringLength(string) that takes any string as an argument and returns its characters count.
+// const stringLength = (string) => {
+// return string.length;
+// }
 
 const stringLength = (string) => {
-    return string.length;
+    let charCount = 0;
+    for (let i = 0; i <= string.length; i++) {
+        charCount = i;
+    }
+    return charCount;
 }
 
-stringLength('Lucky');
+module.exports = stringLength;
