@@ -5,22 +5,22 @@
 // }
 
 const stringLength = (string) => {
-    let charCount = 0;
-    for (let i = 0; i <= string.length; i++) {
-        charCount = i;
+  let charCount = 0;
+  for (let i = 0; i <= string.length; i += 1) {
+    charCount = i;
+  }
+  try {
+    if (charCount < 1) {
+      throw new Error('Condition does not meet: Less than 1');
     }
-    try {
-        if (charCount < 1) {
-            throw 'Error';
-        }
-        if (charCount > 10) {
-            throw 'Condition does not meet';
-        }
+    if (charCount > 10) {
+      throw new Error('Condition does not meet: Greater than 10');
     }
-    finally {
-    }
-    return charCount;
-}
+  } finally {
+    //   something
+  }
+  return charCount;
+};
 
 // console.log(stringLength('lucky'));
 
@@ -39,13 +39,32 @@ const stringLength = (string) => {
 // }
 
 const reverseString = (string) => {
-    var newString = "";
-    for (let i = string.length - 1; i >= 0; i--) {
+  let newString = '';
+  for (let i = string.length - 1; i >= 0; i -= 1) {
     newString += string[i];
-}
-return newString;
+  }
+  return newString;
+};
+
+// console.log(reverseString('Lucky'));
+
+// Task 3:
+
+class Calculator {
+  constructor(a, b) {
+    this.a = a;
+    this.b = b;
+  }
+
+    add = (a, b) => a + b;
+
+    subtract = (a, b) => a - b;
+
+    divide = (a, b) => a / b;
+
+    multiply = (a, b) => a * b;
 }
 
-console.log(reverseString('Lucky'));
+console.log(Calculator.add(7, 9));
 
 module.exports = { stringLength, reverseString };
