@@ -1,6 +1,3 @@
-import _ from 'lodash';
-import './style.css';
-
 // const stringLength = (string) => {
 // return string.length;
 // }
