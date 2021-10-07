@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((module) => {
 
-eval("// const stringLength = (string) => {\n// return string.length;\n// }\n\nconst stringLength = (string) => {\n    let charCount = 0;\n    for (let i = 1; i <= string.length; i++) {\n        charCount = i;\n    }\n    if (charCount > 10) {\n        throw 'Error';\n    }\n    return charCount;\n}\n\nconsole.log(stringLength('Luckyllllll'));\n\nmodule.exports = stringLength;\n\n//# sourceURL=webpack://webpack-setup/./src/index.js?");
+eval("// const stringLength = (string) => {\n// return string.length;\n// }\n\nconst stringLength = (string) => {\n    let charCount = 0;\n    for (let i = 0; i <= string.length; i++) {\n        charCount = i;\n    }\n    try {\n        if (charCount < 1) {\n            throw 'Error';\n        }\n        if (charCount > 10) {\n            throw 'Condition does not meet';\n        }\n    }\n    finally {\n    }\n    return charCount;\n}\n\nconsole.log(stringLength('lucky'));\n\nmodule.exports = stringLength;\n\n//# sourceURL=webpack://webpack-setup/./src/index.js?");
 
 /***/ })
 
