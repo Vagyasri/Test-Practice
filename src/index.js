@@ -4,13 +4,22 @@
 
 const stringLength = (string) => {
     let charCount = 0;
-    for (let i = 1; i <= string.length; i++) {
+    for (let i = 0; i <= string.length; i++) {
         charCount = i;
     }
-    if (charCount > 10) {
-        throw 'Condition does not meet';
+    try {
+        if (charCount < 1) {
+            throw 'Error';
+        }
+        if (charCount > 10) {
+            throw 'Condition does not meet';
+        }
+    }
+    finally {
     }
     return charCount;
 }
+
+console.log(stringLength('lucky'));
 
 module.exports = stringLength;
