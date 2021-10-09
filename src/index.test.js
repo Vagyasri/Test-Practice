@@ -34,3 +34,7 @@ describe('A simple calculator for operating on two parameters', () => {
     expect(newCalculator.multiply(14, 2)).toEqual(28);
   });
 });
+
+test('Capitalize a text', () => {
+  expect(capitalize('lucky')).toBe('Lucky');
+});
