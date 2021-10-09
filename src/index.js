@@ -65,4 +65,11 @@ const newCalculator = new Calculator();
 
 // console.log(newCalculator.add(7, 9));
 
-module.exports = { stringLength, reverseString, newCalculator };
+const capitalize = (string) => {
+  const cap = string.charAt(0).toUpperCase() + string.slice(1);
+  return cap;
+};
+
+module.exports = {
+  stringLength, reverseString, newCalculator, capitalize,
+};

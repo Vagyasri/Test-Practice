@@ -1,4 +1,6 @@
-const { stringLength, reverseString, newCalculator } = require('./index');
+const {
+  stringLength, reverseString, newCalculator, capitalize,
+} = require('./index');
 
 test('String length of:', () => {
   expect(stringLength('Lucky')).toBe(5);
