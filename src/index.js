@@ -51,11 +51,6 @@ const reverseString = (string) => {
 // Task 3:
 
 class Calculator {
-  constructor(a, b) {
-    this.a = a;
-    this.b = b;
-  }
-
     add = (a, b) => a + b;
 
     subtract = (a, b) => a - b;
@@ -65,6 +60,9 @@ class Calculator {
     multiply = (a, b) => a * b;
 }
 
-console.log(Calculator.add(7, 9));
+// eslint-disable-next-line no-unused-vars
+const newCalculator = new Calculator();
 
-module.exports = { stringLength, reverseString };
+// console.log(newCalculator.add(7, 9));
+
+module.exports = { stringLength, reverseString, newCalculator };
